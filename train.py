@@ -138,7 +138,7 @@ def train():
     if args.is_local:
         logger.info("run local training")
         main_program = fluid.default_main_program()
-        train_loop(args, main_program, data_list, loss, auc_var, batch_auc_var, 1, -1)
+        train_loop(args, main_program, data_list, loss, auc_var, batch_auc_var, 1, 0)
     else:
         logger.info("run dist training")
         t = fluid.DistributeTranspiler()
