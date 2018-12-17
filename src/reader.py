@@ -19,7 +19,7 @@ class CriteoDataset(Dataset):
                 with open(file, 'r') as f:
                     line_idx = 0
                     for line in f:
-                        print('line:', line)
+                        #print('line:', line)
                         line_idx += 1
                         #if is_train and line_idx > self.train_idx_:
                         #    break
