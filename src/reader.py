@@ -19,13 +19,14 @@ class CriteoDataset(Dataset):
                 with open(file, 'r') as f:
                     line_idx = 0
                     for line in f:
+                        print('line:', line)
                         line_idx += 1
-                        if is_train and line_idx > self.train_idx_:
-                            break
-                        elif not is_train and line_idx <= self.train_idx_:
-                            continue
-                        if line_idx % trainer_num != trainer_id:
-                            continue
+                        #if is_train and line_idx > self.train_idx_:
+                        #    break
+                        #elif not is_train and line_idx <= self.train_idx_:
+                        #    continue
+                        #if line_idx % trainer_num != trainer_id:
+                        #    continue
                         features = line.rstrip('\n').split('\t')
                         dense_feature = []
                         sparse_feature = []
